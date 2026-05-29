@@ -2,9 +2,10 @@
 # Copyright (c) 2026 Kernel-Align Contributors
 
 import torch
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, Mapping, Sequence
 from rl_engine.kernels.registry import kernel_registry
 from rl_engine.executors.bridge import IPCWeightBridge
+from rl_engine.executors.vllm_sampler import VLLMSamplerConfig, VLLMSharedPrefixSampler
 from rl_engine.utils.logger import logger
 
 
@@ -20,6 +21,8 @@ class RolloutExecutor:
         self.shared_weights: Dict[str, torch.Tensor] = {}
         self.logp_op = None
         self.attn_op = None
+        self.sampler_config = VLLMSamplerConfig.from_model_config(self.config)
+        self.sampler: Optional[VLLMSharedPrefixSampler] = None
 
         logger.info("Initializing Zero-Copy enabled RolloutExecutor...")
 
@@ -48,10 +51,43 @@ class RolloutExecutor:
                 f" Attn: {type(self.attn_op).__name__}"
             )
 
+    def _prepare_sampler(self) -> VLLMSharedPrefixSampler:
+        """
+        Lazily construct the vLLM-backed sampler.
+
+        vLLM import and engine construction are deferred so CPU-only tests and
+        kernel-only workflows do not pay the sampler startup cost.
+        """
+        if self.sampler is None:
+            self.sampler = VLLMSharedPrefixSampler(self.sampler_config)
+            logger.info(
+                "Initialized vLLM rollout sampler "
+                f"(prefix_cache={self.sampler_config.enable_prefix_caching}, "
+                f"num_generations={self.sampler_config.num_generations})"
+            )
+        return self.sampler
+
+    def generate_candidates(
+        self,
+        prompts: str | Sequence[str],
+        *,
+        num_generations: Optional[int] = None,
+        sampling_params: Optional[Mapping[str, Any]] = None,
+    ) -> Dict[str, Any]:
+        """
+        Generate GRPO rollout candidates through vLLM with shared prefix caching.
+        """
+        sampler = self._prepare_sampler()
+        return sampler.generate(
+            prompts,
+            num_generations=num_generations,
+            sampling_params=sampling_params,
+        )
+
     def execute_rollout(self, input_ids: torch.Tensor):
         """
         Execute sampling using optimized fused kernels.
-        Solves the $O(G \cdot L \cdot V)$ memory wall for GRPO rollout.
+        Solves the O(G * L * V) memory wall for GRPO rollout.
         """
         self._prepare_kernels()
 
