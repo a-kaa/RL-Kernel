@@ -2,6 +2,9 @@
 # Copyright (c) 2026 Kernel-Align Contributors
 
 from rl_engine.utils.logger import logger
+from typing import Any
+
+_C: Any = None
 
 try:
     from rl_engine import _C

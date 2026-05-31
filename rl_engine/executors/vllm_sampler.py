@@ -104,7 +104,7 @@ class VLLMSharedPrefixSampler:
         sampling_params: Optional[Mapping[str, Any]] = None,
     ) -> dict[str, Any]:
         """Generate grouped candidates while keeping each prompt prefix byte-identical."""
-        prompt_list = _normalize_prompts(prompts)
+        prompt_list = _normalize_prompts(prompts)  # type: ignore
         generations = num_generations or self.config.num_generations
         if generations < 1:
             raise ValueError("num_generations must be >= 1")

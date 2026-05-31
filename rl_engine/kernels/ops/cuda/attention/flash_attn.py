@@ -38,7 +38,7 @@ class FlashAttentionOp:
         k: torch.Tensor,
         v: torch.Tensor,
         dropout_p: float = 0.0,
-        softmax_scale: float = None,
+        softmax_scale: float | None = None,
         causal: bool = False,
     ) -> torch.Tensor:
         """
