@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/assets/rl-engine-log-display.png" width="220" alt="RL-Kernel Logo">
+  <img src="docs/assets/logo.png" width="220" alt="RL-Kernel Logo">
 </p>
 
 <h1 align="center">RL-Kernel</h1>

@@ -6,8 +6,8 @@ exclude_docs: |
 
 theme:
   name: material
-  logo: assets/rl-engine-log.png
-  favicon: assets/rl-engine-log.png
+  logo: assets/logo.png
+  favicon: assets/logo.png
   palette:
     - media: "(prefers-color-scheme)"
       toggle:

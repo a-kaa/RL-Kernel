@@ -6,9 +6,9 @@ hide:
 
 # Welcome to RL-Kernel
 
-<figure markdown="span">
-  ![](./assets/logo.png){ align="center" alt="RL-Kernel" width="38%" }
-</figure>
+<p align="center">
+  <img src="assets/logo.png" alt="RL-Kernel Logo" width="200">
+</p>
 
 <p style="text-align:center">
 <strong>High-performance kernels and runtime infrastructure for RL post-training.</strong>
