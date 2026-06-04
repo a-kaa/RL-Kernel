@@ -48,8 +48,6 @@ Integrating **FlashInfer** fused kernels to accelerate the bottleneck of RL trai
 | 128 | 18.89 ms | **1.86 ms** | **10x** |
 | 256 | 36.23 ms | **2.94 ms** | **12x** |
 
----
-
 <p align="center">
   <img src="docs/assets/2. sampling latency.png" alt="Sampling Latency Benchmark">
 </p>
