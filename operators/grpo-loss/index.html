@@ -8,31 +8,27 @@
       
       
       
-        <link rel="canonical" href="https://rl-align.github.io/RL-Kernel/api/">
+        <link rel="canonical" href="https://rl-align.github.io/RL-Kernel/operators/grpo-loss/">
       
       
-        <link rel="prev" href="../benchmarking/">
-      
-      
-        <link rel="next" href="../cli/">
       
       
         
       
       
-      <link rel="icon" href="../assets/logo.png">
+      <link rel="icon" href="../../assets/logo.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>API Reference - RL-Kernel</title>
+        <title>GRPO Loss - RL-Kernel</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +47,9 @@
       
     
     
-      <link rel="stylesheet" href="../mkdocs/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../mkdocs/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-reference" class="md-skip">
+        <a href="#grpo-loss" class="md-skip">
           Skip to content
         </a>
       
@@ -94,9 +90,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="RL-Kernel" class="md-header__button md-logo" aria-label="RL-Kernel" data-md-component="logo">
+    <a href="../.." title="RL-Kernel" class="md-header__button md-logo" aria-label="RL-Kernel" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -113,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API Reference
+              GRPO Loss
             
           </span>
         </div>
@@ -233,7 +229,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -254,7 +250,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../usage/" class="md-tabs__link">
+        <a href="../../usage/" class="md-tabs__link">
           
   
   
@@ -276,7 +272,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../contributing/" class="md-tabs__link">
+        <a href="../../contributing/" class="md-tabs__link">
           
   
   
@@ -298,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../benchmarking/" class="md-tabs__link">
+        <a href="../../benchmarking/" class="md-tabs__link">
           
   
   
@@ -316,13 +312,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../api/" class="md-tabs__link">
           
   
   
@@ -344,7 +338,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../cli/" class="md-tabs__link">
+        <a href="../../cli/" class="md-tabs__link">
           
   
   
@@ -366,7 +360,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../community/" class="md-tabs__link">
+        <a href="../../community/" class="md-tabs__link">
           
   
   
@@ -408,9 +402,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="RL-Kernel" class="md-nav__button md-logo" aria-label="RL-Kernel" data-md-component="logo">
+    <a href="../.." title="RL-Kernel" class="md-nav__button md-logo" aria-label="RL-Kernel" data-md-component="logo">
       
-  <img src="../assets/logo.png" alt="logo">
+  <img src="../../assets/logo.png" alt="logo">
 
     </a>
     RL-Kernel
@@ -437,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -495,7 +489,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../usage/" class="md-nav__link ">
+            <a href="../../usage/" class="md-nav__link ">
               
   
   
@@ -539,7 +533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/weight-sync-bridge/" class="md-nav__link">
+      <a href="../../usage/weight-sync-bridge/" class="md-nav__link">
         
   
   
@@ -567,7 +561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/grpo-single-gpu-example/" class="md-nav__link">
+      <a href="../../usage/grpo-single-gpu-example/" class="md-nav__link">
         
   
   
@@ -653,7 +647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../getting_started/quickstart/" class="md-nav__link">
         
   
   
@@ -681,7 +675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting_started/installation/" class="md-nav__link">
+      <a href="../../getting_started/installation/" class="md-nav__link">
         
   
   
@@ -744,7 +738,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../operators/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -788,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/fused-logp/" class="md-nav__link">
+      <a href="../fused-logp/" class="md-nav__link">
         
   
   
@@ -816,7 +810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../operators/sampling/" class="md-nav__link">
+      <a href="../sampling/" class="md-nav__link">
         
   
   
@@ -886,7 +880,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../contributing/" class="md-nav__link ">
+            <a href="../../contributing/" class="md-nav__link ">
               
   
   
@@ -990,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/documentation/" class="md-nav__link">
+      <a href="../../contributing/documentation/" class="md-nav__link">
         
   
   
@@ -1018,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/testing/" class="md-nav__link">
+      <a href="../../contributing/testing/" class="md-nav__link">
         
   
   
@@ -1046,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributing/operator-doc-template/" class="md-nav__link">
+      <a href="../../contributing/operator-doc-template/" class="md-nav__link">
         
   
   
@@ -1138,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design/runtime-dispatch/" class="md-nav__link">
+      <a href="../../design/runtime-dispatch/" class="md-nav__link">
         
   
   
@@ -1204,7 +1198,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../benchmarking/" class="md-nav__link ">
+            <a href="../../benchmarking/" class="md-nav__link ">
               
   
   
@@ -1247,8 +1241,6 @@
       
   
   
-    
-  
   
   
     
@@ -1262,23 +1254,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../api/" class="md-nav__link ">
               
   
   
@@ -1297,7 +1286,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1347,7 +1336,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cli/" class="md-nav__link ">
+            <a href="../../cli/" class="md-nav__link ">
               
   
   
@@ -1416,7 +1405,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../community/" class="md-nav__link ">
+            <a href="../../community/" class="md-nav__link ">
               
   
   
@@ -1475,6 +1464,108 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entry-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entry Point
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entry Point">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-specification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group specification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backends
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tensor-contract" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tensor Contract
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accuracy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Performance Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Implementation Files
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1491,46 +1582,6 @@
   
 
 
-  <nav class="md-path" aria-label="Navigation" >
-    <ol class="md-path__list">
-      
-        
-  
-  
-    <li class="md-path__item">
-      <a href=".." class="md-path__link">
-        
-  <span class="md-ellipsis">
-    Home
-  </span>
-
-      </a>
-    </li>
-  
-
-      
-      
-        
-  
-  
-    
-    
-      <li class="md-path__item">
-        <a href="./" class="md-path__link">
-          
-  <span class="md-ellipsis">
-    API Reference
-  </span>
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ol>
-  </nav>
-
               
               <article class="md-content__inner md-typeset">
                 
@@ -1538,7 +1589,7 @@
 
 
   
-    <a href="https://github.com/RL-Align/RL-Kernel/edit/main/docs/api/README.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/RL-Align/RL-Kernel/edit/main/docs/operators/grpo-loss.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1546,18 +1597,194 @@
   
 
 
-<h1 id="api-reference">API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
-<p>This section is reserved for generated or curated API reference pages.</p>
-<p>Current public entry points to document first:</p>
+<h1 id="grpo-loss">GRPO Loss<a class="headerlink" href="#grpo-loss" title="Permanent link">&para;</a></h1>
+<p>GRPO Loss computes the Group Relative Policy Optimization objective for RL post-training:
+it normalizes raw sequence rewards within each generation group into advantages, then
+evaluates the clipped surrogate objective plus a reference-KL penalty over the active
+completion tokens. It targets the GRPO training step, where a naive PyTorch implementation
+allocates several broadcasted <code>[batch, completion_len]</code> intermediates and a per-token
+advantage tensor.</p>
+<p>The operator consumes per-token <strong>log-probs</strong>, so it composes directly with the <a href="../fused-logp/">Fused LogP</a> operator:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>logits --[logp op]--&gt; logps --[grpo_loss op]--&gt; loss
+</span></code></pre></div>
+<h2 id="entry-point">Entry Point<a class="headerlink" href="#entry-point" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">rl_engine.kernels.registry</span><span class="w"> </span><span class="kn">import</span> <span class="n">kernel_registry</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">grpo_loss</span> <span class="o">=</span> <span class="n">kernel_registry</span><span class="o">.</span><span class="n">get_op</span><span class="p">(</span><span class="s2">&quot;grpo_loss&quot;</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="n">loss</span><span class="p">,</span> <span class="n">policy_loss</span><span class="p">,</span> <span class="n">kl</span> <span class="o">=</span> <span class="n">grpo_loss</span><span class="p">(</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">current_logps</span><span class="p">,</span>        <span class="c1"># [B, T] current policy logps (differentiable)</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="n">old_logps</span><span class="p">,</span>            <span class="c1"># [B, T] inference engine log-probs</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="n">ref_logps</span><span class="p">,</span>            <span class="c1"># [B, T] reference model log-probs</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="n">rewards</span><span class="p">,</span>              <span class="c1"># [B]</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="n">completion_mask</span><span class="p">,</span>      <span class="c1"># [B, T]</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="n">clip_eps</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="n">beta</span><span class="o">=</span><span class="mf">0.04</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="n">samples_per_prompt</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>  <span class="c1"># uniform groups; or pass group_boundaries=[...]</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">)</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>           <span class="c1"># gradient flows into current_logps</span>
+</span></code></pre></div>
+<p>Note: <code>B = num_prompts * samples_per_prompt</code>. The [B, T] tensors are made contiguous and flattened to 1-D [N = B*T] before the kernel launch.</p>
+<h3 id="group-specification">Group specification<a class="headerlink" href="#group-specification" title="Permanent link">&para;</a></h3>
+<p>Provide <strong>exactly one</strong> of:
+- <code>samples_per_prompt: int</code> — uniform groups (every prompt has the same number of samples).
+- <code>group_boundaries</code> — CSR-style offsets of length <code>num_groups + 1</code> (e.g. <code>[0, 8, 16, 24]</code>)
+  for variable-sized groups.</p>
+<h2 id="backends">Backends<a class="headerlink" href="#backends" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Backend</th>
+<th>Wrapper</th>
+<th>Native symbol</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CUDA</td>
+<td><code>TritonGRPOLossOp</code></td>
+<td>Triton JIT kernels</td>
+<td>Fused forward + analytic backward.</td>
+</tr>
+<tr>
+<td>PyTorch fallback</td>
+<td><code>NativeGRPOLossOp</code></td>
+<td>None</td>
+<td>Reference path; CPU and Triton-less GPUs.</td>
+</tr>
+</tbody>
+</table>
+<p>The Triton op fuses three kernels: <code>_group_norm_kernel</code> (per-group reward mean/std in
+registers), and token-parallel <code>_grpo_fwd_kernel</code> / <code>_grpo_bwd_kernel</code>. Each token gathers
+its advantage on the fly (<code>seq_id = token_index // completion_len</code>), so the broadcasted
+<code>[B, T]</code> advantage tensor is never materialized.</p>
+<h2 id="tensor-contract">Tensor Contract<a class="headerlink" href="#tensor-contract" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Shape</th>
+<th>Dtype</th>
+<th>Requirements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>current_logps</code></td>
+<td><code>[B, T]</code></td>
+<td>float (fp32 recommended)</td>
+<td>Differentiable input</td>
+</tr>
+<tr>
+<td><code>old_logps</code></td>
+<td><code>[B, T]</code></td>
+<td>float</td>
+<td>Constant (no grad).</td>
+</tr>
+<tr>
+<td><code>ref_logps</code></td>
+<td><code>[B, T]</code></td>
+<td>float</td>
+<td>Constant (no grad).</td>
+</tr>
+<tr>
+<td><code>rewards</code></td>
+<td><code>[B]</code></td>
+<td>float</td>
+<td>One scalar per sequence.</td>
+</tr>
+<tr>
+<td><code>completion_mask</code></td>
+<td><code>[B, T]</code></td>
+<td 0_1="0,1">bool /</td>
+<td>2-D; <code>True</code> marks active tokens.</td>
+</tr>
+<tr>
+<td><code>loss</code> (output)</td>
+<td>scalar</td>
+<td>float32</td>
+<td><code>policy_loss + beta * kl</code>.</td>
+</tr>
+<tr>
+<td><code>policy_loss</code>, <code>kl</code> (output)</td>
+<td>scalar</td>
+<td>float32</td>
+<td>Detached reporting values.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="accuracy">Accuracy<a class="headerlink" href="#accuracy" title="Permanent link">&para;</a></h2>
+<p>Reference semantics (matching <code>examples/grpo_single_gpu.py</code>):</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># advantages: group-normalized rewards (population std, unbiased=False)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">grouped</span> <span class="o">=</span> <span class="n">rewards</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">samples_per_prompt</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">adv</span> <span class="o">=</span> <span class="p">(</span><span class="n">grouped</span> <span class="o">-</span> <span class="n">grouped</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span> <span class="o">/</span> <span class="n">grouped</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdim</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">unbiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">clamp_min</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">adv</span> <span class="o">=</span> <span class="n">adv</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)[:,</span> <span class="kc">None</span><span class="p">]</span><span class="o">.</span><span class="n">expand_as</span><span class="p">(</span><span class="n">completion_mask</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="n">ratio</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">current_logps</span> <span class="o">-</span> <span class="n">old_logps</span><span class="p">)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">policy</span> <span class="o">=</span> <span class="o">-</span><span class="n">torch</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">ratio</span> <span class="o">*</span> <span class="n">adv</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">clamp</span><span class="p">(</span><span class="n">ratio</span><span class="p">,</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">clip_eps</span><span class="p">,</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">clip_eps</span><span class="p">)</span> <span class="o">*</span> <span class="n">adv</span><span class="p">)</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">diff</span> <span class="o">=</span> <span class="n">ref_logps</span> <span class="o">-</span> <span class="n">current_logps</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">kl</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">diff</span><span class="p">)</span> <span class="o">-</span> <span class="n">diff</span> <span class="o">-</span> <span class="mf">1.0</span>                      <span class="c1"># k3 estimator</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">loss</span> <span class="o">=</span> <span class="n">masked_mean</span><span class="p">(</span><span class="n">policy</span><span class="p">,</span> <span class="n">completion_mask</span><span class="p">)</span> <span class="o">+</span> <span class="n">beta</span> <span class="o">*</span> <span class="n">masked_mean</span><span class="p">(</span><span class="n">kl</span><span class="p">,</span> <span class="n">completion_mask</span><span class="p">)</span>
+</span></code></pre></div>
+<p>The Triton op matches the native reference (forward and backward) to <code>atol=1e-4</code> in fp32.
+Composing with the dispatched CUDA fused logp matches a torch oracle to <code>atol=1e-3</code>.</p>
+<h2 id="performance-notes">Performance Notes<a class="headerlink" href="#performance-notes" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>python<span class="w"> </span>benchmarks/benchmark_grpo_loss.py
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>python<span class="w"> </span>benchmarks/benchmark_grpo_loss.py<span class="w"> </span>--configs<span class="w"> </span><span class="s2">&quot;64,8,512;256,16,1024&quot;</span>
+</span></code></pre></div>
+<p>Indicative results (RTX PRO 6000, SM120, fp32):</p>
+<table>
+<thead>
+<tr>
+<th>shape (prompts × samples × len)</th>
+<th>tokens</th>
+<th>forward speedup</th>
+<th>fwd+bwd speedup</th>
+<th>peak VRAM (native → Triton)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64 × 8 × 512</td>
+<td>0.26M</td>
+<td>4.7×</td>
+<td>3.0×</td>
+<td>10 MB → 1 MB</td>
+</tr>
+<tr>
+<td>128 × 8 × 1024</td>
+<td>1.05M</td>
+<td>3.2×</td>
+<td>2.7×</td>
+<td>40 MB → 4 MB</td>
+</tr>
+<tr>
+<td>256 × 16 × 1024</td>
+<td>4.19M</td>
+<td>3.0×</td>
+<td>3.0×</td>
+<td>160 MB → 16 MB</td>
+</tr>
+</tbody>
+</table>
+<p>The ~10× VRAM reduction comes from not materializing the broadcasted advantage and
+per-token surrogate/KL intermediates.</p>
+<h2 id="tests">Tests<a class="headerlink" href="#tests" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>tests/test_grpo_loss.py<span class="w"> </span>-v
+</span></code></pre></div>
+<p>Covers the native reference, Triton forward/backward vs native, the
+<code>logp → grpo_loss</code> pipeline, masked-token invariance, an SGD loss step, and registry
+dispatch. Triton tests skip without CUDA + Triton.</p>
+<h2 id="implementation-files">Implementation Files<a class="headerlink" href="#implementation-files" title="Permanent link">&para;</a></h2>
 <ul>
-<li><code>rl_engine.kernels.registry.KernelRegistry</code></li>
-<li><code>rl_engine.kernels.registry.kernel_registry</code></li>
-<li><code>rl_engine.kernels.sampling.SamplerBackend</code></li>
-<li><code>rl_engine.kernels.ops.cuda.FusedLogpSM90Op</code></li>
-<li><code>rl_engine.kernels.ops.cuda.FusedLogpGenericOp</code></li>
+<li><code>rl_engine/kernels/ops/pytorch/loss/grpo_loss.py</code></li>
+<li><code>rl_engine/kernels/ops/triton/triton_grpo_loss.py</code></li>
+<li><code>rl_engine/kernels/registry.py</code></li>
+<li><code>tests/test_grpo_loss.py</code></li>
+<li><code>benchmarks/benchmark_grpo_loss.py</code></li>
 </ul>
-<p>As the project grows, this section can adopt generated API pages for public Python
-interfaces.</p>
 
 
 
@@ -1565,6 +1792,27 @@ interfaces.</p>
 
 
 
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 9, 2026 09:09:15 UTC">June 9, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
 
 
 
@@ -1617,10 +1865,10 @@ interfaces.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.action.edit", "content.code.copy", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.path", "search.highlight", "search.share", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.action.edit", "content.code.copy", "content.tabs.link", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.path", "search.highlight", "search.share", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js"></script>
       

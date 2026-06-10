@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/api/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/api/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/benchmarking/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/benchmarking/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/cli/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/cli/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/community/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/community/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/contributing/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/contributing/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/contributing/documentation/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/contributing/documentation/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/contributing/operator-doc-template/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/contributing/operator-doc-template/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/contributing/testing/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/contributing/testing/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/design/runtime-dispatch/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/design/runtime-dispatch/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/getting_started/installation/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/getting_started/installation/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/getting_started/quickstart/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/getting_started/quickstart/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/operators/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/operators/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/operators/fused-logp/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/operators/fused-logp/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/operators/sampling/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/operators/grpo-loss/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/usage/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/operators/sampling/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/usage/grpo-single-gpu-example/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/usage/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
     <url>
-         <loc>https://a-kaa.github.io/RL-Kernel/usage/weight-sync-bridge/</loc>
+         <loc>https://rl-align.github.io/RL-Kernel/usage/grpo-single-gpu-example/</loc>
+         <lastmod>2026-06-10</lastmod>
+    </url>
+    <url>
+         <loc>https://rl-align.github.io/RL-Kernel/usage/weight-sync-bridge/</loc>
          <lastmod>2026-06-10</lastmod>
     </url>
 </urlset>
