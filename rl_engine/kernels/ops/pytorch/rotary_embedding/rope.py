@@ -21,14 +21,10 @@ class NativeRoPEOp:
     def __init__(self) -> None:
         pass
 
-    def __call__(
-        self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0
-    ) -> Tensor:
+    def __call__(self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0) -> Tensor:
         return self.forward(x, positions, theta=theta)
 
-    def forward(
-        self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0
-    ) -> Tensor:
+    def forward(self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0) -> Tensor:
         """Apply RoPE in input dtype. Cos/sin always computed in fp32."""
         cos, sin = self._compute_cos_sin(x, positions, theta=theta)
         xf = x
@@ -37,9 +33,7 @@ class NativeRoPEOp:
         out = xf * cos + rotated * sin
         return out.to(dtype=x.dtype)
 
-    def forward_fp32(
-        self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0
-    ) -> Tensor:
+    def forward_fp32(self, x: Tensor, positions: Tensor, *, theta: float = 1_000_000.0) -> Tensor:
         """fp32 gold standard: internal computation and output are fp32."""
         cos, sin = self._compute_cos_sin(x, positions, theta=theta)
         xf = x.float()
@@ -53,9 +47,7 @@ class NativeRoPEOp:
     # ------------------------------------------------------------------ #
 
     @staticmethod
-    def _compute_cos_sin(
-        x: Tensor, positions: Tensor, *, theta: float
-    ) -> tuple[Tensor, Tensor]:
+    def _compute_cos_sin(x: Tensor, positions: Tensor, *, theta: float) -> tuple[Tensor, Tensor]:
         """Compute cos/sin tables in fp32 from positions and theta.
 
         Args:
@@ -72,8 +64,7 @@ class NativeRoPEOp:
         # inv_freq[i] = 1 / (theta^(2i/D)) = 1 / (theta^(i/half))
         # shape: [half]
         inv_freq = 1.0 / (
-            theta
-            ** (torch.arange(0, half, dtype=torch.float32, device=x.device) / half)
+            theta ** (torch.arange(0, half, dtype=torch.float32, device=x.device) / half)
         )
 
         # positions: [S] -> [S, 1] or [B, S] -> [B, S, 1]

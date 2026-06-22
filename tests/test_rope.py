@@ -16,7 +16,6 @@ import torch
 
 from rl_engine.kernels.ops.pytorch.rotary_embedding.rope import NativeRoPEOp
 
-
 # ---------------------------------------------------------------------------
 # Fixtures & helpers
 # ---------------------------------------------------------------------------
@@ -49,6 +48,7 @@ def _hf_rotate_half_reference(x, positions, theta=1e6):
 # ---------------------------------------------------------------------------
 # Correctness
 # ---------------------------------------------------------------------------
+
 
 class TestNativeRoPEOpCorrectness:
     """Basic correctness: shape, dtype, purity, HF reference match."""
@@ -129,6 +129,7 @@ class TestNativeRoPEOpCorrectness:
 # Axis A — Batch invariance (bitwise)
 # ---------------------------------------------------------------------------
 
+
 class TestNativeRoPEOpBatchInvariance:
     """Axis A: forward_fp32 must be bitwise batch-invariant.
 
@@ -142,9 +143,7 @@ class TestNativeRoPEOpBatchInvariance:
         full_out = op.forward_fp32(x, pos)
         for i in range(x.shape[0]):
             single_out = op.forward_fp32(x[i : i + 1], pos)
-            assert torch.equal(full_out[i], single_out[0]), (
-                f"Batch invariance broken at row {i}"
-            )
+            assert torch.equal(full_out[i], single_out[0]), f"Batch invariance broken at row {i}"
 
     def test_batch_invariance_with_padding(self):
         """Padded batch (extra rows) must not affect valid rows."""
@@ -176,14 +175,15 @@ class TestNativeRoPEOpBatchInvariance:
         full_out = op.forward_fp32(x, pos_2d)
         for i in range(B):
             single_out = op.forward_fp32(x[i : i + 1], pos_2d[i : i + 1])
-            assert torch.equal(full_out[i], single_out[0]), (
-                f"Batch invariance broken at row {i} with 2D positions"
-            )
+            assert torch.equal(
+                full_out[i], single_out[0]
+            ), f"Batch invariance broken at row {i} with 2D positions"
 
 
 # ---------------------------------------------------------------------------
 # Axis B — Accuracy (forward vs forward_fp32)
 # ---------------------------------------------------------------------------
+
 
 class TestNativeRoPEOpAccuracy:
     """Axis B: forward(input_dtype) vs forward_fp32 under tolerance thresholds.
@@ -210,14 +210,14 @@ class TestNativeRoPEOpAccuracy:
         out_fp32 = op.forward_fp32(x_typed, pos)
         diff = (out_typed - out_fp32).abs().max().item()
         assert torch.allclose(out_typed, out_fp32, atol=atol, rtol=rtol), (
-            f"dtype={dtype}, max_abs_error={diff:.3e} exceeds "
-            f"atol={atol}, rtol={rtol}"
+            f"dtype={dtype}, max_abs_error={diff:.3e} exceeds " f"atol={atol}, rtol={rtol}"
         )
 
 
 # ---------------------------------------------------------------------------
 # Qwen3-8B specific shapes
 # ---------------------------------------------------------------------------
+
 
 class TestNativeRoPEOpQwen3Shapes:
     """Verify with Qwen3-8B actual dimensions."""
