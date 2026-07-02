@@ -70,8 +70,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--op", choices=operator_names(), default="logp")
     parser.add_argument(
         "--candidate",
-        default="registry",
-        help="Candidate backend to validate, for example registry, pytorch, cuda, cuda-sm90.",
+        default="pytorch",
+        help="Candidate backend to validate, for example pytorch, cuda, cuda-sm90, triton.",
     )
     parser.add_argument("--dtype", choices=("fp32", "bf16", "fp16"), default="fp32")
     parser.add_argument("--device", default="auto")

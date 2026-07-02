@@ -20,7 +20,6 @@ class OperatorSpec:
     op_class: str
     gold_path: str
     gold_method: str
-    registry_name: str
     candidate_paths: dict[str, str]
     grad_input_names: tuple[str, ...] = ()
 
@@ -38,7 +37,6 @@ OP_SPECS = {
         op_class="logprob",
         gold_path="rl_engine.kernels.ops.pytorch.loss.logp.NativeLogpOp",
         gold_method="forward_fp32",
-        registry_name="logp",
         candidate_paths={
             "pytorch": "rl_engine.kernels.ops.pytorch.loss.logp.NativeLogpOp",
             "cuda": "rl_engine.kernels.ops.cuda.loss.logp.FusedLogpGenericOp",
@@ -52,7 +50,6 @@ OP_SPECS = {
         op_class="logprob",
         gold_path="rl_engine.kernels.ops.pytorch.loss.linear_logp.NativeLinearLogpOp",
         gold_method="apply",
-        registry_name="linear_logp",
         candidate_paths={
             "pytorch": "rl_engine.kernels.ops.pytorch.loss.linear_logp.NativeLinearLogpOp",
             "triton": "rl_engine.kernels.ops.triton.loss.linear_logp.TritonLinearLogpOp",
@@ -109,17 +106,7 @@ def make_candidate(args: argparse.Namespace) -> CandidateSpec:
             fn=candidate_op,
         )
 
-    if candidate_name == "registry":
-        from rl_engine.kernels.registry import kernel_registry
-
-        return CandidateSpec(
-            name=f"registry-{args.op}",
-            backend="registry",
-            arch_key=args.arch_key,
-            fn=kernel_registry.get_op(spec.registry_name),
-        )
-
-    supported = sorted([*spec.candidate_paths, "native", "registry"])
+    supported = sorted([*spec.candidate_paths, "native"])
     raise ValueError(
         f"unsupported candidate {args.candidate!r} for op {args.op!r}; "
         f"supported candidates: {', '.join(supported)}"

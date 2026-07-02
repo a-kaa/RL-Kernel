@@ -143,13 +143,13 @@ candidates:
   cuda         -> FusedLogpGenericOp
   cuda-generic -> FusedLogpGenericOp
   cuda-sm90    -> FusedLogpSM90Op
-  registry     -> kernel_registry.get_op("logp")
 ```
 
 Important note:
 
 - `candidate=pytorch` is only a smoke test for the checker itself.
 - CUDA, Triton, ROCm, and future hardware-specific implementations are candidates.
+- Registry dispatch is tested separately from this accuracy harness because it is hardware-dependent.
 - Do not compare two operators that implement different math, such as ordinary `logp` and `linear_logp`.
 
 ### SM90 Adapter Exception
@@ -190,7 +190,7 @@ Supported key options:
 
 ```text
 --op              Operator name. The minimal version supports logp and linear_logp.
---candidate       Candidate backend, for example pytorch, cuda, cuda-generic, cuda-sm90, registry.
+--candidate       Candidate backend, for example pytorch, cuda, cuda-generic, cuda-sm90, triton.
 --dtype           fp32, bf16, or fp16.
 --device          auto, cpu, cuda, or another torch device string.
 --arch-key        Optional tolerance override key such as sm90.
@@ -276,7 +276,6 @@ Add an `OperatorSpec` entry:
     name="new_op",
     op_class="elementwise",
     gold_path="rl_engine.kernels.ops.pytorch....NativeNewOp",
-    registry_name="new_op",
     candidate_paths={
         "pytorch": "rl_engine.kernels.ops.pytorch....NativeNewOp",
         "cuda": "rl_engine.kernels.ops.cuda....CudaNewOp",

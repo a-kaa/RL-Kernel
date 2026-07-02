@@ -51,25 +51,6 @@ def test_logp_native_candidate_suite_passes():
     assert all(case.passed for case in report.candidates[0].cases)
 
 
-def test_logp_registry_candidate_suite_passes_on_cpu():
-    from rl_engine.kernels.registry import kernel_registry
-
-    report = run_operator_suite(
-        "logp",
-        candidates=[
-            CandidateSpec(
-                name="registry-logp",
-                backend="registry",
-                fn=kernel_registry.get_op("logp"),
-            )
-        ],
-        cases=[_logp_case("fp32", torch.float32, seed=4)],
-    )
-
-    assert report.passed
-    assert report.candidates[0].candidate_name == "registry-logp"
-
-
 def test_suite_reports_failure_for_bad_candidate():
     def bad_logp(logits, token_ids):
         del token_ids
