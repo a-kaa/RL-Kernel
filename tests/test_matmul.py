@@ -74,6 +74,22 @@ class TestNativeMatmulOpCorrectness:
         assert NativeMatmulOp.op_class == "reduction"
 
 
+class TestNativeMatmulOpBackward:
+    def test_backward_matches_torch_matmul(self):
+        op = NativeMatmulOp()
+        a, b = _make_inputs(2, 16, 64, 32)
+        ref_a = a.clone().requires_grad_(True)
+        ref_b = b.clone().requires_grad_(True)
+        test_a = a.clone().requires_grad_(True)
+        test_b = b.clone().requires_grad_(True)
+
+        torch.matmul(ref_a, ref_b).sum().backward()
+        op.forward_fp32(test_a, test_b).sum().backward()
+
+        assert torch.equal(test_a.grad, ref_a.grad)
+        assert torch.equal(test_b.grad, ref_b.grad)
+
+
 class TestNativeMatmulOpBatchInvariance:
     def test_batch1_vs_batchN_bitwise(self):
         op = NativeMatmulOp()
