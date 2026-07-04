@@ -179,6 +179,26 @@ class TestNativeRoPEOpBatchInvariance:
                 full_out[i], single_out[0]
             ), f"Batch invariance broken at row {i} with 2D positions"
 
+    def test_backward_batch_invariance_bitwise(self):
+        """Axis A backward: full-batch x.grad slice must match batch=1 x.grad."""
+        op = NativeRoPEOp()
+        x, pos = _make_inputs(4, 32, 16, QWEN3_HEAD_DIM, seed=101)
+        grad_out = torch.randn(*x.shape, generator=torch.Generator().manual_seed(202))
+
+        full_x = x.clone().requires_grad_(True)
+        op.forward_fp32(full_x, pos).backward(grad_out)
+        assert full_x.grad is not None
+
+        for i in range(x.shape[0]):
+            single_x = x[i : i + 1].clone().requires_grad_(True)
+            single_grad_out = grad_out[i : i + 1]
+            op.forward_fp32(single_x, pos).backward(single_grad_out)
+            assert single_x.grad is not None
+            assert torch.equal(
+                full_x.grad[i],
+                single_x.grad[0],
+            ), f"Backward batch invariance broken at row {i}"
+
 
 # ---------------------------------------------------------------------------
 # Axis B — Accuracy (forward vs forward_fp32)
