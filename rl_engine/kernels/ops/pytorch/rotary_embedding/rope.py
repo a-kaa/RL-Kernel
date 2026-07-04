@@ -68,7 +68,7 @@ class NativeRoPEOp:
         )
 
         # positions: [S] -> [S, 1] or [B, S] -> [B, S, 1]
-        pos_float = positions.float().unsqueeze(-1)
+        pos_float = positions.to(device=x.device, dtype=torch.float32).unsqueeze(-1)
 
         # freqs: [S, half] or [B, S, half]
         freqs = pos_float * inv_freq
