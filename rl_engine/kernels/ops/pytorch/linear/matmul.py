@@ -7,7 +7,7 @@ import torch
 from torch import Tensor
 
 
-class NativeMatmulOp:
+class NativeMatmulOp(torch.nn.Module):
     """Pure PyTorch reference GEMM.
 
     It intentionally uses one `torch.matmul` call in fp32 for
@@ -17,10 +17,7 @@ class NativeMatmulOp:
     op_class = "reduction"
 
     def __init__(self) -> None:
-        pass
-
-    def __call__(self, a: Tensor, b: Tensor) -> Tensor:
-        return self.forward(a, b)
+        super().__init__()
 
     def forward(self, a: Tensor, b: Tensor) -> Tensor:
         """Compute `a @ b` and return the input dtype."""
