@@ -207,6 +207,9 @@ nvidia-smi
 # Fail fast: verify _C actually built AND launches on this GPU, instead of silently
 # falling back to native kernels (which would leave GPU CI green while testing nothing).
 "$PY" scripts/ci_smoke.py
+# The build above compiled and smoke-tested _C, so enforce its presence in the pytest
+# suite too (tests/test_extension_smoke.py skips unless this is set).
+export RL_KERNEL_REQUIRE_EXT=1
 '"${TEST_CMD}"
 
 echo "[ci] Launching remote test suite on GPU pod (Distributed Execution Mode: TP=${GPU_COUNT})..."
