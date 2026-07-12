@@ -2,7 +2,7 @@
 layout: post
 title: "Announcing RL-Kernel for vime: Faster and Leaner linear_logp for Full RL Rollouts"
 author: "RL-Kernel Contributors and the vime Team"
-image: "../../assets/RL-Kernel%20underlying%20operator%20library%20technical%20architecture.png"
+image: "../../assets/blog/rlk-global-architecture.png"
 summary: "RL-Kernel brings a fused SM90 tensor-parallel linear_logp operator into vime, cutting selected-logprob CUDA time and peak reserved memory in full 8xH100 rollout training."
 read_time_minutes: 7
 tags:
@@ -43,7 +43,7 @@ RL-Kernel is not designed around a single path for every workload. Instead, oper
 RL-Kernel is designed as an operator-layer bridge between high-level RL orchestration and low-level GPU backends. It integrates with rollout engines and training engines through custom operator hooks, while the actual kernels are implemented through CUDA, Triton, ROCm, and related backend libraries.
 
 <p align="center">
-<img src="../../assets/RL-Kernel%20underlying%20operator%20library%20technical%20architecture.png" alt="RL-Kernel Global Architecture" width="80%">
+<img src="../../assets/blog/rlk-global-architecture.png" alt="RL-Kernel Global Architecture" width="80%">
 <br>
 <em>RL-Kernel sits at the operator layer between RL orchestration frameworks and hardware-specific kernel backends. This is the architecture diagram from the RL-Kernel README.</em>
 </p>
